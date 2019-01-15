@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HubComponent } from './home/hub/hub.component';
-import {PresentationComponent} from './presentation-component/presentation.component';
-import {CalendarComponent} from './calendar/calendar.component';
+import {LoginComponent} from './login/login.component';
+import {ContentComponent} from './content/content.component';
+import {GlobalConferencesListComponent} from './global-conferences-list/global-conferences-list.component';
+import {ConferencePlayerComponent} from './content/conference-player/conference-player.component';
+import {RegisterComponent} from './register/register.component';
+import {AuthGuard} from './guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HubComponent },
-  { path: 'presentation', component: PresentationComponent },
-  { path: 'calendar', component: CalendarComponent },
+   {
+     path: '', redirectTo: 'home', pathMatch: 'full'
+   },
+   { path: 'home', component: ContentComponent },
+   { path: 'video/:id', component: ConferencePlayerComponent, canActivate: [AuthGuard] },
+   { path: 'login', component: LoginComponent },
+   { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({

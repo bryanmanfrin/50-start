@@ -1,0 +1,50 @@
+.advertisement_poster {
+  background: url("../../assets/drinking-person-rustic.jpg") center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  p, h1 {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .advertisement_poster {
+    background-image: url("../../assets/drinking-person-rustic.jpg");
+  }
+}
+
+@media only screen and (min-device-width : 768px) {
+  .img_wrapper {
+    height: 600px !important;
+  }
+}
+@media only screen and (max-device-width : 768px) {
+  .img_wrapper {
+    height: 400px !important;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+
+.img_wrapper {
+  padding: 50px 0px 50px 0px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  color: white;
+
+  div {
+    margin: auto;
+  }
+}
+
+.img_wrapper:nth-child(even){
+  background-color: rgba(0, 0, 0, 0.3);
+}
+

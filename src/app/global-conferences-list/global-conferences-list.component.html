@@ -1,0 +1,34 @@
+<app-title [title]="title"></app-title>
+<div>
+  <div class="videos_container" *ngIf="videos.length > 0">
+    <div class="background-overlay">
+      <div class="video_preview" *ngFor="let video of videos;" (click)="selectConference(video)">
+
+        <div class="preview_title">
+          <p>{{video.title}}</p>
+        </div>
+        <div class="preview_background"
+             style="background-image: url('http://www.cnesco.fr/wp-content/uploads/2016/08/CC_lecture.jpg');"></div>
+        <!-- <img src="http://www.cnesco.fr/wp-content/uploads/2016/08/CC_lecture.jpg"> -->
+        <div class="info_overlay container">
+          <div>
+            <div class="row">
+              <div class="col-4">
+                <img src="https://s3.amazonaws.com/kairos-media/team/Ben_Virdee-Chapman.jpeg" alt="">
+              </div>
+              <div class="col-8">
+                <div class="row">Thierry Lohest</div>
+                <p class="row">Entrepreneur, CEO, fondateur de ComComGow</p>
+              </div>
+            </div>
+            <div class="row preview_description h-100">
+              <p>Cette vidéo abordera les différentes législations en matière d'entrepreneuriat en Belgique. Nous
+                verrons ensemble les applications des lois accompagnées d'exemples concrets. La vidéo est accompagnée de
+                ressources.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

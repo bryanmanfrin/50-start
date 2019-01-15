@@ -1,0 +1,77 @@
+<div>
+  <div class="videos_container">
+    <div class="background-overlay" style="padding: 100px 20px 20px 20px;">
+      <div>
+        <div class="row">
+
+          <div class="col-lg-9 col-md-12">
+            <div class="video_player">
+              <iframe class="video_iframe"
+                      frameborder="0"
+                      [src]="conferenceId | safeEmbeddedYoutubeUrlPipe">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-12">
+            <iframe class="video_iframe"
+                    frameborder="0"
+                    [src]="conferenceId | safeEmbeddedChatUrl">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-title title="Description"></app-title>
+
+
+
+  <div class="videos_container">
+    <div class="background-overlay" style="padding: 21px 20px 20px 20px;">
+      <div class="row">
+
+        <div class="col-3">
+          <div class="presenter-description">
+
+            <div class="row">
+              <div class="col-12">
+                <h4>Profile</h4>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                Thierry Lohest est un entrepreneur travaillant depuis 10 ans
+                dans la consultance et conseille les jeunes entrepreneurs depuis 3 ans.
+                Son expérience a été utile à un grand nombre de startups.
+                Il a rejoint 2Start car il veut promouvoir la créativité et permettre à
+                de jeunes entrepreneurs de se lancer.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-9">
+          <!-- presenter description TITLE -->
+          <div class="video-description">
+            <div class="row">
+              <div class="col-12">
+                <div>
+                  <h4>{{ conference?.title }}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                Dans cette video, Thierry Lohest vous partagera certains de ses conseils pour la gestion de votre porte-feuille d'entreprise et quelques règles
+                à appliquer pour trouver quels sont les dépenses les plus intéressantes en termes d'imposition.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

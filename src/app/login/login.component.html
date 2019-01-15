@@ -1,0 +1,42 @@
+<div class="row form-padding">
+  <div class="form-background"></div>
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Se connecter</h3>
+      </div>
+      <div class="card-body">
+
+        <form [formGroup]="loginForm">
+          <div class="form">
+
+            <div class="form-group">
+              <label for="">Email</label>
+              <input type="email" formControlName="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+              <label for="">Mot de passe</label>
+              <input type="password" formControlName="password" class="form-control rounded-0" id="inputPassword" placeholder="Mot de passe">
+            </div>
+
+            <div class="alert alert-warning" role="alert" *ngIf="formIsSubmitted && (
+            loginForm.controls.password.errors?.required || loginForm.controls.password.pristine
+            || loginForm.controls.email.errors?.serverError || loginForm.controls.password.errors?.serverError
+            || loginForm.controls.email.errors?.required || loginForm.controls.email.errors?.email || loginForm.controls.email.pristine)">
+              <span *ngIf="loginForm.controls.email.errors?.email || loginForm.controls.email.errors?.pattern" >Veuillez vérifier votre adresse mail<br></span>
+              <span *ngIf="loginForm.controls.password.errors?.required" >Veuillez mentionner un mot de passe<br></span>
+              <span *ngIf="loginForm.controls.email.errors?.required" >Veuillez mentionner une adresse mail<br></span>
+              <span *ngIf="loginForm.controls.email.errors?.serverError" >Adresse email invalide<br></span>
+              <span *ngIf="loginForm.controls.password.errors?.serverError">Mot de passe invalide<br></span>
+            </div>
+
+            <button (click)="login()" type="button" class="btn btn-success float-right">Se connecter</button>
+            <span>Pas encore de compte? <a routerLink="/register">Créer</a></span>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

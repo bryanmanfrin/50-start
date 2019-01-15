@@ -1,0 +1,9 @@
+.video_container {
+}
+
+.video_container > iframe {
+  width: 90vh;
+  display: block;
+  margin: auto;
+  height:56vh;
+}

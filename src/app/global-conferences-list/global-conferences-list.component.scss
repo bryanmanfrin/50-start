@@ -1,0 +1,95 @@
+// video items
+.videos_container {
+  background-image: url('src/assets/background-brick-wall.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.videos_container .background-overlay{
+  padding: 30px 0px 30px 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// Video preview
+.video_preview {
+  position: relative;
+  border-radius: 1%;
+  background-color: black;
+  color: white;
+  margin: 7px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  width: 300px;
+  height: 250px;
+  display: inline-block;
+
+  &:hover .info_overlay{
+    height:70%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.video_preview .preview_background {
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.video_preview .preview_title {
+  position: absolute;
+  top: 0;
+  background-color: black;
+  width: 100%;
+}
+
+.video_preview .preview_title > p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 5px;
+}
+
+// Video overlay - description
+.info_overlay .preview_description > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px;     /* fallback */
+  max-height: 50px;
+  margin: 5px 5px 5px 0px;
+}
+
+.info_overlay {
+  -webkit-transition: height 1s; /* For Safari 3.1 to 6.0 */
+  transition: height 0.5s;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 300px;
+  z-index: 40;
+  overflow: hidden;
+}
+
+.info_overlay > div {
+  margin: 5px;
+}
+
+.info_overlay img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 80%;
+}
+
+
+

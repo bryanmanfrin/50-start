@@ -1,0 +1,46 @@
+.navbar_scroll > img {
+  padding: 5px 0px 5px 0px;
+}
+
+.navbar a, .navbar_scroll a {
+    display: inline-block;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar li:hover {
+  background-color: #7f0000;;
+}
+
+
+.app_logo_navbar {
+  left: 20px;
+  height: 40px;
+}
+
+.navbar_opened {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.my_navbar {
+  z-index: 3;
+  color: white;
+  position: fixed;
+  top: 0;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.my_navbar > button:focus {
+  outline: none;
+}
+
+.my_navbar a {
+  color: white;
+}
+.my_navbar li {
+  text-align: center;
+}
+
+
