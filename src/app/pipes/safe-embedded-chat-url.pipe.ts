@@ -10,7 +10,8 @@ export class SafeEmbeddedChatUrlPipe implements PipeTransform {
   }
 
   transform(videoId: any, args?: any): any {
-    return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/live_chat?v=' + videoId + '&embed_domain=localhost') ;
+    return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/live_chat?v=' + videoId +
+      '&embed_domain=start2project.herokuapp.com') ;
   }
 
 }

@@ -10,7 +10,7 @@ export class SafeEmbeddedYoutubeUrlPipe implements PipeTransform {
   }
 
   transform(videoId: any, args?: any): any {
-    return this.sanitizer.bypassSecurityTrustResourceUrl('http://youtube.com/embed/' + videoId + '?rel=0&modestbranding=1&showinfo=0') ;
+    return this.sanitizer.bypassSecurityTrustResourceUrl('https://youtube.com/embed/' + videoId + '?rel=0&modestbranding=1&showinfo=0') ;
   }
 
 }
