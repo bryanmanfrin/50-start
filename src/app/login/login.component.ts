@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   loginUserData: {email: string, password: string} = {email: '', password: ''};
   formIsSubmitted = false;
-  private loginForm: FormGroup;
+  public loginForm: FormGroup;
   serverValidationErrors = '';
 
   constructor(private _authService: AuthService, private _router: Router, private formBuilder: FormBuilder) { }

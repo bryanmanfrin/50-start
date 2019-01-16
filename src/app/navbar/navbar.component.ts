@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2, HostListener} from '@angular/core';
+import {Component, ElementRef, AfterViewInit, HostListener} from '@angular/core';
 import {AuthService} from '../services/authentication/auth.service';
 
 @Component({
@@ -9,7 +9,7 @@ import {AuthService} from '../services/authentication/auth.service';
 export class NavbarComponent implements AfterViewInit {
 
   navbarOpen = false;
-  constructor(private eRef: ElementRef, private _authService: AuthService) { }
+  constructor(private eRef: ElementRef, public _authService: AuthService) { }
 
   @HostListener('document:click', ['$event'])
   clickout(event) {

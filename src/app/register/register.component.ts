@@ -11,8 +11,8 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 export class RegisterComponent implements OnInit {
 
   invalidForm = false;
-  private registerForm: FormGroup;
-  private formIsSubmitted = false;
+  public registerForm: FormGroup;
+  public formIsSubmitted = false;
 
   constructor(private _authService: AuthService, private _router: Router, private formBuilder: FormBuilder) { }
 
@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
           this._authService.setCurrentUser(res.pseudo);
           this._router.navigate(['/']);
         },
-        (err) => this.invalidForm = true
+        () => this.invalidForm = true
       );
     }
   }

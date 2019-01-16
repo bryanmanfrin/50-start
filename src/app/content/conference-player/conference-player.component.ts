@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, OnInit, Output} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {YoutubeService} from '../../services/youtube-service.service';
 
@@ -10,7 +10,7 @@ import {YoutubeService} from '../../services/youtube-service.service';
 export class ConferencePlayerComponent implements OnInit {
 
   public conferenceId: string;
-  private conference: any;
+  public conference: any;
   @Output() removeCurrentlySelectedConferenceEmitter = new EventEmitter<any>();
 
   constructor(private elem: ElementRef, private route: ActivatedRoute, private ytService: YoutubeService) {
