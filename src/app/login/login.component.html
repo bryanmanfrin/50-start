@@ -27,8 +27,7 @@
               <span *ngIf="loginForm.controls.email.errors?.email || loginForm.controls.email.errors?.pattern" >Veuillez vérifier votre adresse mail<br></span>
               <span *ngIf="loginForm.controls.password.errors?.required" >Veuillez mentionner un mot de passe<br></span>
               <span *ngIf="loginForm.controls.email.errors?.required" >Veuillez mentionner une adresse mail<br></span>
-              <span *ngIf="loginForm.controls.email.errors?.serverError" >Adresse email invalide<br></span>
-              <span *ngIf="loginForm.controls.password.errors?.serverError">Mot de passe invalide<br></span>
+              <span *ngIf="loginForm.controls.email.errors?.serverError || loginForm.controls.password.errors?.serverError">Identifiants invalides<br></span>
             </div>
 
             <button (click)="login()" type="button" class="btn btn-success float-right">Se connecter</button>
