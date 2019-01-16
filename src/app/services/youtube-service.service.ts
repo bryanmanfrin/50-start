@@ -10,12 +10,12 @@ export class YoutubeService {
   }
 
   getVideos(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:3127/listVids').pipe(
+    return this.http.get<any[]>('https://node-api-2start.herokuapp.com/listVids').pipe(
       map((results: any[]) => results.concat(results.concat(results))),
     );
   }
 
   getVideoById(videoId: string) {
-    return this.http.get<any[]>('http://localhost:3127/video/' + videoId);
+    return this.http.get<any[]>('https://node-api-2start.herokuapp.com/video/' + videoId);
   }
 }

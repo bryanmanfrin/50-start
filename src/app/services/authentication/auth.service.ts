@@ -5,8 +5,8 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class AuthService {
 
-  private _registerUrl = 'http://localhost:3127/register';
-  private _loginUrl = 'http://localhost:3127/login';
+  private _registerUrl = 'https://node-api-2start.herokuapp.com/register';
+  private _loginUrl = 'https://node-api-2start.herokuapp.com/login';
   public pseudo = '';
   constructor(private http: HttpClient) {
     if (localStorage.getItem('pseudo')) {
